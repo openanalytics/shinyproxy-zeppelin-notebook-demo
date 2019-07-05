@@ -36,3 +36,5 @@ and then mounting it to the container:
     container-volumes: [ "/tmp/zeppelin/#{proxy.userId}/notebook:/zeppelin/notebook", "/tmp/zeppelin/#{proxy.userId}/logs:/zeppelin/logs", "/tmp/zeppelin/conf:/zeppelin/conf" ]
 ```
 Note that here the `conf` folder is shared across users.
+
+An example `application.yml` with the described options is included. 

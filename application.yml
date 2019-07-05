@@ -1,0 +1,26 @@
+proxy:
+  title: Open Analytics Shiny Proxy
+  logo-url: http://www.openanalytics.eu/sites/www.openanalytics.eu/themes/oa/logo.png
+  landing-page: /
+  heartbeat-rate: 10000
+  heartbeat-timeout: 60000
+  port: 8080
+  container-wait-time: 30000
+  admin-groups: scientists
+  authentication: simple
+  users:
+  - name: demo
+    password: demo
+    groups: scientists
+  docker:
+    cert-path: /home/none
+    url: http://localhost:2375
+    port-range-start: 20000
+  specs:
+  - id: zeppelin
+    display-name: Apache Zeppelin
+    description: Apache Zeppelin Official Docker
+    container-image: apache/zeppelin:0.8.1
+    container-volumes: [ "/tmp/zeppelin/#{proxy.userId}/notebook:/zeppelin/notebook", "/tmp/zeppelin/#{proxy.userId}/logs:/zeppelin/logs", "/tmp/zeppelin/conf:/zeppelin/conf" ]
+    port: 8080
+ 
