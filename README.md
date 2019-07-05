@@ -17,10 +17,10 @@ In order to store the notebooks, the volumes on the host need to be mounted to p
     container-volumes: [ "/tmp/zeppelin/#{proxy.userId}/notebook:/zeppelin/notebook", "/tmp/zeppelin/#{proxy.userId}/logs:/zeppelin/logs" ]
 ```
 This will ensure that each user's notebooks are stored in a separate directory on the server.
-By modifying the host paths other scenarios can be implemented, such as shared notebook storage for per user group, or shared storage for all users.
+By modifying the host paths other scenarios can be implemented, such as shared notebook storage per user group, or shared storage for all users.
 
 In addition to the notebooks, also the "interpreter binding" configuration need to be stored.
-This can be done by creating a folder on the Docker host with [default `conf` files from Apache Zeppelin](https://github.com/apache/zeppelin/tree/master/conf):
+This can be achieved by creating a folder on the Docker host containing [`conf` files from Apache Zeppelin](https://github.com/apache/zeppelin/tree/master/conf):
 ```bash
 # creating `conf` folder
 VERSION=0.8.1
