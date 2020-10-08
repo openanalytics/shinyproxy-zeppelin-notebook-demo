@@ -1,6 +1,6 @@
 proxy:
   title: Open Analytics Shiny Proxy
-  logo-url: http://www.openanalytics.eu/sites/www.openanalytics.eu/themes/oa/logo.png
+  logo-url: https://www.openanalytics.eu/shinyproxy/logo.png
   landing-page: /
   heartbeat-rate: 10000
   heartbeat-timeout: 60000
@@ -23,4 +23,4 @@ proxy:
     container-image: apache/zeppelin:0.8.1
     container-volumes: [ "/tmp/zeppelin/#{proxy.userId}/notebook:/zeppelin/notebook", "/tmp/zeppelin/#{proxy.userId}/logs:/zeppelin/logs", "/tmp/zeppelin/conf:/zeppelin/conf" ]
     port: 8080
- 
+
