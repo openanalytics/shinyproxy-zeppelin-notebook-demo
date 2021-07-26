@@ -22,5 +22,5 @@ proxy:
     description: Apache Zeppelin Official Docker
     container-image: apache/zeppelin:0.8.1
     container-volumes: [ "/tmp/zeppelin/#{proxy.userId}/notebook:/zeppelin/notebook", "/tmp/zeppelin/#{proxy.userId}/logs:/zeppelin/logs", "/tmp/zeppelin/conf:/zeppelin/conf" ]
+    websocket-reconnection-mode: None
     port: 8080
-
