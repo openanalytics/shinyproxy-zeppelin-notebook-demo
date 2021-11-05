@@ -47,4 +47,4 @@ and then mounting it to the container:
 
 Note that here the `conf` folder is shared across users.
 
-**(c) Copyright Open Analytics NV, 2021.**
+**(c) Copyright Open Analytics NV, 2019-2021.**
