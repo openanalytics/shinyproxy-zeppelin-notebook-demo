@@ -13,8 +13,6 @@ proxy:
     password: demo
     groups: scientists
   docker:
-    cert-path: /home/none
-    url: http://localhost:2375
     port-range-start: 20000
   specs:
   - id: zeppelin
