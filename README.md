@@ -8,12 +8,13 @@ Create a ShinyProxy configuration file (see [application.yml](application.yml)
 for a complete file), containing:
 
 ```yaml
-specs:
-  - id: zeppelin
-    display-name: Apache Zeppelin
-    container-image: apache/zeppelin:0.8.1
-    websocket-reconnection-mode: None
-    port: 8080
+proxy:
+  specs:
+    - id: zeppelin
+      display-name: Apache Zeppelin
+      container-image: apache/zeppelin:0.8.1
+      websocket-reconnection-mode: None
+      port: 8080
 ```
 
 In order to store the notebooks, the volumes on the host need to be mounted to point to `/zeppelin/notebook` inside container (and to `/zeppelin/logs` for the logs):
